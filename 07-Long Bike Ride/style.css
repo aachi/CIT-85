@@ -1,0 +1,16 @@
+@charset 'utf-8';
+
+html {margin:0;padding:0;font:300 100% 'Helvetica Neue',Sans-Serif;}
+body, section, figure, main, object, ul {margin:inherit;}
+ul {list-style:none;padding:0;}
+header, object, nav {width:100%;}
+main, nav {box-shadow:0 0 1em rgb(0,0,0);}
+nav {display:-webkit-flex;flex-direction:row;justify-content:space-between;align-items:center;padding:0;background:#fff;z-index:9999;position:fixed;top:0;}
+nav ul {display:-webkit-flex;flex-direction:row;}
+nav a {padding:25px 30px;}
+nav p {padding-left:15px;}
+object {background:url('background.jpg') center center no-repeat;height:800px;position:fixed;}
+main {position:absolute;top:790px;background:#fff;}
+section {padding:15px;}
+footer {background:rgb(34,34,34);padding:45px;color:#fff;}
+code {background:rgba(238, 238, 238, 1);padding:3px 7px;}

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <title></title>
+        <link rel='stylesheet' type='text/css' href='style.css' />
+        <!--<script src='js/vendor/require/require.js'></script>
+        <script>
+            require(['/js/common.js'], function(common) {
+                require(['/js/main.js']);
+            });
+        </script>-->
+    </head>
+    <body>
+        <header>
+            <div class='centerpiece'>
+                <h3>Julian Coleman</h3>
+            </div>
+        </header>
+        <section>
+            <div class='centerpiece'>
+                <!--  The left side bar with the links  -->
+                <aside id='listItemView'>
+                </aside>
+
+                <!--  The right side content with the documentation and the examples  -->
+                <div id='documentation'>
+                    <div class='header' id='display-block'>
+                        <h3>display-block</h3>
+                    </div>
+                    <div class='section'>
+                        <div style='display:block;background:red;height:100px;width:100px'>These are</div>
+                        <div style='display:block;background:blue;height:100px;width:100px'>block elements</div>
+                    </div>
+                    <div class='header' id='display-inline'>
+                        <h3>display-inline</h3>
+                    </div>
+                    <div class='section' style='padding:10px'>
+                        <div style='display:inline;background:red;height:100px;width:100px;padding:10px'>Well, the sad thing is...</div>
+                        <div style='display:inline;background:blue;height:100px;width:100px;padding:10px'>Inline doesn't respect the height and width CSS values</div>
+                    </div>
+                    <div class='header' id='display-none'>
+                        <h3>display-none</h3>
+                    </div>
+                    <div class='section'>
+                        <div id='nope' style='display:block;height:100px;width:100px;background:green;padding:10px;'>Hover over me!<br />Try and catch me!</div>
+                    </div>
+                    <div class='header' id='margin-auto'>
+                        <h3>margin-auto</h3>
+                    </div>
+                    <div class='section'>
+                        <div>A good example of margin-auto is this entire section in the middle of the page. It rests in the center of the page regardless of the screen width.</div>
+                    </div>
+                    <div class='header' id='max-width'>
+                        <h3>max-width</h3>
+                    </div>
+                    <div class='section'>
+                        <div style='max-width:300px;background:red;'>This box has a max width of 300 pixels!</div>
+                        <div style='max-width:450px;background:blue;'>This box has a max width of 450 pixels. Larger than the previous one!</div>
+                    </div>
+                    <div class='header' id='box-model'>
+                        <h3>box-model</h3>
+                    </div>
+                    <div class='section'>
+                        <div style='width:500px;margin:20px auto;border:5px solid cyan;'>I'm smaller</div>
+                        <div style='width:500px;margin:20px auto;padding:50px;border-width:10px;border:5px solid cyan;'>And I'm bigger!</div>
+                    </div>
+                    <div class='header' id='box-sizing'>
+                        <h3>box-sizing</h3>
+                    </div>
+                    <div class='section'>
+                        <div style='width:500px;margin:20px auto;padding:50px;box-sizing:border-box;border:10px solid cyan;'>We can fix that obnoxious sizing issue by adding box-sizing property to the element. This element has the same properties as the larger element just above! The only difference is the new property</div>
+                    </div>
+                    <div class='header' id='position-static'>
+                        <h3>position-static</h3>
+                    </div>
+                    <div class='section'>
+                        <div>Elements by default have a position of static. We use this primarily to determine how other attributes affect an element. For example, z-index will not work while an element is positioned static. Why? An element in static is considered reserved and untouched. It is displayed exactly as it is in the box model with regards to the relative height and width to the other elements. Setting other properties will have various effects.</div>
+                    </div>
+                    <div class='header' id='position-relative'>
+                        <h3>position-relative</h3>
+                    </div>
+                    <div class='section'>
+                        <div style='position:relative;'>This element is positioned relative. Does it look much different? Not exactly, but it does allow us to use some more interesting attributes, as well as affect the content contained within this element in a more precise manner, such as if this text was positioned absolutely. If this element was not positioned relative, and the content was absolute, the text would be in the far left corner of the page. Since, however, this element is positioned relative, the absolute content will rest in the upper left hand corner of this element</div>
+                    </div>
+                    <div class='header' id='position-fixed'>
+                        <h3>position-fixed</h3>
+                    </div>
+                    <div class='section'>
+                        <div style='position:fixed;top:0;left:0;'>This element doesn't care where you are in the scroll. It will always be on the screen. This content belongs to the position-fixed element</div>
+                    </div>
+                    <div class='header' id='position-absolute'>
+                        <h3>position-absolute</h3>
+                    </div>
+                    <div class='section'>
+                        <div style='position:absolute;'>This content is positioned absolutely. This content doesn't look much different than the relatively positioned one, but the difference is that the height is no longer evaluated with the default padding. And since the element that contains this element is positioned relatively, it keeps it nice and snug in the enclosing container.</div>
+                    </div>
+                    <div class='header' id='float'>
+                        <h3>float</h3>
+                    </div>
+                    <div class='section'>
+                        <div style='float:left;background:red;'>This content floats left</div>
+                        <div style='float:right;background:blue;'>This content floats to the right</div>
+                    </div>
+                    <div class='header' id='clear'>
+                        <h3>clear</h3>
+                    </div>
+                    <div class='section'>
+                        <span style='clear:both;display:block;'>This content is in a span, which always shows elements inline with itself. However, since this element has a 'clear' on it, it means no content can be either on the left, or the right, or this content.</span>
+                        <span>This is also in a span</span>
+                    </div>
+                    <div class='header' id='clearfix'>
+                        <h3>clearfix</h3>
+                    </div>
+                    <div class='section' style='overflow:auto;'>
+                        <div style='border:5px solid cyan;float:left;'>This element has what's called a clearfix. Since the image has a float, it means the border disregards the height of the image and only wraps the text. With clearfix, it allows the enclosing element to attempt to wrap around all of its content.
+                        <img src='http://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg' style='float:right;' height='100' alt='' />
+                    </div>
+                    <div class='header' id='float-layout-example'>
+                        <h3>float-layout-example</h3>
+                    </div>
+                    <div class='section'>
+                        <div>Remember that float example above? that's a layout. Cheers!</div>
+                    </div>
+                    <div class='header' id='percent-width'>
+                        <h3>percent-width</h3>
+                    </div>
+                    <div class='section'>
+                        <div style='width:50%'>This element is exactly 50% of its parent container</div>
+                    </div>
+                    <div class='header' id='percent-width-layout'>
+                        <h3>percent-width-layout</h3>
+                    </div>
+                    <div class='section'>
+                        <div style='width:49%;display:inline-block'>This is on the left, with a width of 50%</div>
+                        <div style='width:49%;display:inline-block'>This is on the right, with a width of 50%</div>
+                    </div>
+                    <div class='header' id='inline-block'>
+                        <h3>inline-block</h3>
+                    </div>
+                    <div class='section'>
+                        <div>The example above has two divs inline-block in order for them to be right next to each other</div>
+                    </div>
+                    <div class='header' id='inline-block-layout'>
+                        <h3>inline-block-layout</h3>
+                    </div>
+                    <div class='section'>
+                        <div>It is also an inlin-block layout!</div>
+                    </div>
+                    <div class='header' id='column'>
+                        <h3>column</h3>
+                    </div>
+                    <div class='section'>
+                        <div style='display:flex'>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque illum fugiat officiis repellendus velit nobis, accusantium iure quo reprehenderit quisquam, voluptatem numquam recusandae nam nesciunt quos? Atque quaerat expedita qui!</div>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia dolore neque, soluta numquam expedita reprehenderit distinctio facere rem iste ad. Veniam similique dignissimos, itaque rerum dolore repellendus dolores molestiae cupiditate!</div>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet modi dolores pariatur voluptates, reiciendis minima earum, iure accusamus excepturi laborum, assumenda enim nostrum sunt iusto harum fugiat consequuntur animi voluptatibus!</div>
+                        </div>
+                    </div>
+                    <div class='header' id='flexbox'>
+                        <h3>flexbox</h3>
+                    </div>
+                    <div class='section'>
+                        <div style='display:flex'>
+                            <span>This is awesome flexbox. It automatically evaluates the width of the enclosing container, as well as has some really incredible padding, marginal, and overflow presets that help reduce code and make it much simpler</span>
+                        </div>
+                    </div>
+                    <div class='header' id='fancy-flexbox'>
+                        <h3>fancy-flexbox</h3>
+                    </div>
+                    <div class='section'>
+                        <div style='display:flex;flex-wrap:wrap;flex-direction:column;'>
+                            <div><h3>Flexbox!</h3></div>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas iure accusamus necessitatibus consequuntur tenetur quisquam dicta laborum incidunt recusandae ullam voluptate adipisci non earum assumenda, perferendis nihil saepe minima, rerum.</div>
+                            <div>Footer</div>
+                        </div>
+                    </div>
+                    <div class='header' id='center-flexbox'>
+                        <h3>center-flexbox</h3>
+                    </div>
+                    <div class='section'>
+                        <div style='display:flex;justify-content:center;align-items:center;'>
+                            <span>This text is super centered!</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class='centerpiece'>
+                Lesson 3 - Positioning
+            </div>
+        </footer>
+
+        <!--  Marionette Include Files  -->
+        <script src='/assets/js/jquery.js'></script>
+        <script src='/assets/js/jqueryui.js'></script>
+        <script src='/assets/js/json3.js'></script>
+        <script src='/assets/js/underscore.js'></script>
+        <script src='/assets/js/lodash.js'></script>
+        <script src='/assets/js/backbone.js'></script>
+        <script src='/assets/js/marionette.js'></script>
+
+        <!--  Marionette Application  -->
+        <script src='/assets/js/app.js'></script>
+
+    </body>
+</html>

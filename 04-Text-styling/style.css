@@ -1,0 +1,17 @@
+@charset 'utf-8';
+.btn {
+	border:1px solid black;
+	height:50px;
+	background:green;
+	padding:10px;
+	width:5%;
+	border-radius:5px 5px;
+
+	transition:all 0.2s linear;
+	-webkit-transition:all 0.1s linear;
+	box-shadow:5px 5px 10px inset #FFF;
+}
+
+.btn:hover {
+	background:lightblue;
+}
